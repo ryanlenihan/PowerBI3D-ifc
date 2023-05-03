@@ -1,81 +1,137 @@
 {
-    "dataRoles": [      
-      {
-          "displayName": "GUID (mandatory)",
-          "name": "id",
-          "kind": "Grouping",
-          "requiredTypes": [
-            {
-                "text": true
-            }
-        ]
-      },
-      {
-        "displayName": "Category",
-        "name": "category",
-        "kind": "Grouping"
-    },
-    {
-        "name": "data",
-        "kind": "Measure",
-        "displayName": "Color"
-    }
-  ],
-  "objects": 
-  {
-    "model": {
-        "displayName": "Model",
-        "properties": {
-            "url": {
-                "displayName": "URL",
-                "description": "URL of the Rhino model.",
-                "type": {
-                    "text":true                
-                }
-            }    
+    "dataRoles": [{
+            "displayName": "IFC expressID (mandatory)",
+            "name": "id",
+            "kind": "Grouping",
+            "requiredTypes": [{
+                "numeric": true
+            }]
+        },
+        {
+            "displayName": "Do not use - link",
+            "name": "link",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Do not use - color",
+            "name": "data",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Do not use - category",
+            "name": "category",
+            "kind": "Grouping"
         }
-    }
-  },
-  "dataViewMappings": [
-    {
-        "conditions": [
-            {
-                "category": {
-                    "max": 1
-                },
-                "id": {
-                    "max": 1
-                },
-                "data": {
-                    "max": 1
-                }
-            }
-        ],
-        "categorical":{
-            "categories":{
-                "select":[{
-                    "for":{
-                    "in":"id"
+
+    ],
+    "objects": {
+        "model": {
+            "displayName": "Models",
+            "properties": {
+                "url": {
+                    "displayName": "URL",
+                    "description": "URL of the IFC model.",
+                    "type": {
+                        "text": true
                     }
                 },
-                {
-                "bind":{
-                "to":"category"
+                "bgColor": {
+                    "displayName": "Background color",
+                    "displayNameKey": "Visual_BackgroundColor",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "hoverColor": {
+                    "displayName": "Hover color",
+                    "displayNameKey": "Visual_HoverColor",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "selectColor": {
+                    "displayName": "Select color",
+                    "displayNameKey": "Visual_SelectColor",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
                 }
-                }
+            }
+        }
+    },
+
+    "tooltips": {
+        "supportedTypes": {
+            "default": true,
+            "canvas": true
+        },
+        "roles": [
+            "Tooltips"
+        ]
+    },
+
+
+    "dataViewMappings": [{
+        "conditions": [{
+            "category": {
+                "max": 1
+            },
+            "id": {
+                "max": 1
+            },
+            "data": {
+                "max": 1
+            },
+
+            "link": {
+                "max": 1
+            }
+        }],
+        "categorical": {
+            "categories": {
+                "select": [{
+                        "for": {
+                            "in": "id"
+                        }
+                    },
+                    {
+                        "bind": {
+                            "to": "category"
+                        }
+                    }
                 ],
-            "dataReductionAlgorithm":{
-                "top":{
-                    "count":50000
+                "dataReductionAlgorithm": {
+                    "top": {
+                        "count": 50000
                     }
                 }
             },
-            "values":{
-                "bind":{
-                    "to":"data"
-                }
+            "values": {
+                "select": [{
+                        "bind": {
+                            "to": "data"
+                        }
+                    },
+                    {
+                        "bind": {
+                            "to": "link"
+                        }
+                    }
+                ]
             }
-        }        
-      }
-    ]
+
+        }
+    }]
 }

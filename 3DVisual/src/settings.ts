@@ -31,6 +31,9 @@ import DataViewObjectsParser = dataViewObjectsParser.DataViewObjectsParser;
 
 export class ModelSettings {
   public url: string = "";
+  public bgColor: string = "#EBF5FF";
+  public hoverColor: string = "#FFA2F1";
+  public selectColor: string = "#6370FF";
 }
 export class VisualSettings extends DataViewObjectsParser {
   public model: ModelSettings = new ModelSettings();

@@ -184,7 +184,8 @@ export class CustomVisual implements IVisual {
         //const loader = new Rhino3dmLoader();
         //loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@7.11.1/' );
         const loader = new IFCLoader();
-        loader.ifcManager.setWasmPath('https://threejs.org/examples/jsm/loaders/ifc/');
+        //loader.ifcManager.setWasmPath('https://threejs.org/examples/jsm/loaders/ifc/'); // this is no longer available
+        loader.ifcManager.setWasmPath('https://unpkg.com/web-ifc@0.0.36/'); //todo: host "web-ifc.wasm" somewhere else or put have the user define it in visual formats 
         //onload call function
         loader.load(
             // resource URL

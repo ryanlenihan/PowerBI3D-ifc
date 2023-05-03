@@ -1,14 +1,14 @@
 {
-    "version": "1.0.0",
-    "author": {"name":"Diego Apellániz","email":"dapellaniz@gmail.com"},
+    "version": "1.1.4",
+    "author": {"name":"Steven WANG","email":"steven.wang@dragageshk.com"},
     "resources": [
         {
             "resourceId": "rId0",
             "sourceType": 5,
-            "file": "resources/circleCard2955BB329D6640318943EF420537E619.pbiviz.json"
+            "file": "resources/powerBI3DFA89B72B311B4BF98DEF682EC81CCDFA.pbiviz.json"
         }
     ],
-    "visual": {"name":"powerbi3d","displayName":"3D Visor","guid":"circleCard2955BB329D6640318943EF420537E619","visualClassName":"CustomVisual","version":"1.0.0","description":"Custom Visual for Power BI to visualize 3D models and connect them to your data.","supportUrl":"https://github.com/diego-apellaniz/PowerBI3D","gitHubUrl":"https://github.com/diego-apellaniz/PowerBI3D"},
+    "visual": {"name":"powerBI3D","displayName":"3D Visor - IFC","guid":"powerBI3DFA89B72B311B4BF98DEF682EC81CCDFA","visualClassName":"CustomVisual","version":"1.1.4","description":"Custom Visual for Power BI to visualize 3D models and connect them to your data. This project is forked from the original PowerBI3D repository to work with IFC","supportUrl":"https://github.com/diego-apellaniz/PowerBI3D","gitHubUrl":"https://github.com/diego-apellaniz/PowerBI3D"},
     "metadata": {
         "pbivizjson": {
             "resourceId": "rId0"

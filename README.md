@@ -11,3 +11,5 @@ This custom visual was developed by [Diego Apellániz](https://github.com/diego-
 ✅ Filtering: slicer -> model  
 ✅ Filtering: model -> other visuals  
 🟩 Conditional coloring based on db values  
+🟩 Allowing user to upload files in the format tab to avoid issues with CORS(*.IFC)  
+🟥 there seems to be an issue with fetching web-ifc.wasm

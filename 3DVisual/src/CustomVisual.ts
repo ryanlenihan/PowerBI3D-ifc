@@ -52,11 +52,14 @@ import VisualObjectInstanceEnumeration = powerbi.VisualObjectInstanceEnumeration
 
 import * as THREE from 'three';
 // import { Rhino3dmLoader } from 'three/examples/jsm/loaders/3DMLoader.js';
-import { IFCLoader } from 'three/examples/jsm/loaders/IFCLoader.js';
-
+//import { IFCLoader } from 'three/examples/jsm/loaders/IFCLoader.js';
+import { IFCLoader } from  "web-ifc-three/IFCLoader.js" 
+//use @0.0.122 
+//modify line 3345 
+//this.state.api.SetWasmPath(path,true);
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Color, Material, MeshBasicMaterial, MeshDepthMaterial, MeshPhongMaterial, SphereGeometry } from "three";
-import { isDeepStrictEqual } from "util";
+
 
 
 /**
@@ -183,9 +186,9 @@ export class CustomVisual implements IVisual {
         // Create Rhino loader
         //const loader = new Rhino3dmLoader();
         //loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@7.11.1/' );
-        const loader = new IFCLoader();
-        //loader.ifcManager.setWasmPath('https://threejs.org/examples/jsm/loaders/ifc/'); // this is no longer available
-        loader.ifcManager.setWasmPath('https://unpkg.com/web-ifc@0.0.36/'); //todo: host "web-ifc.wasm" somewhere else or put have the user define it in visual formats 
+        const loader = new IFCLoader(); 
+        loader.ifcManager.setWasmPath("https://unpkg.com/web-ifc@0.0.36/");
+
         //onload call function
         loader.load(
             // resource URL

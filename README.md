@@ -4,6 +4,8 @@
 This is a fork of the [PowerBI3D repository](https://github.com/diego-apellaniz/PowerBI3D) that uses the threejs ifcloader to visualize *.ifc models in Power BI.
 This version only supports IFC files.
 
+![image](pbi_ifc_demo.png)
+
 ## Acknowledgement
 This custom visual was developed by [Diego Apellániz](https://github.com/diego-apellaniz/PowerBI3D).<br/> <br/> 
 

@@ -6,8 +6,8 @@
         "visualClassName": "CustomVisual",
         "version": "1.1.4",
         "description": "Custom Visual for Power BI to visualize 3D models and connect them to your data. This project is forked from the original PowerBI3D repository to work with IFC",
-        "supportUrl": "https://github.com/diego-apellaniz/PowerBI3D",
-        "gitHubUrl": "https://github.com/diego-apellaniz/PowerBI3D"
+        "supportUrl": "https://github.com/slcwang/PowerBI3D-ifc",
+        "gitHubUrl": "https://github.com/slcwang/PowerBI3D-ifc"
     },
     "apiVersion": "3.8.0",
     "author": {

@@ -7,7 +7,7 @@ This version only supports IFC files.
 ![video](powerbi3d-ifc.mp4)
 
 ## Acknowledgement
-This custom visual was developed by [Diego Apellániz](https://github.com/diego-apellaniz/PowerBI3D).<br/> <br/> 
+This custom visual was developed for 3DM by [Diego Apellániz](https://github.com/diego-apellaniz/PowerBI3D).<br/> <br/> 
 
 ## Features
 ✅ Filtering: slicer -> model  
@@ -23,7 +23,7 @@ This custom visual was developed by [Diego Apellániz](https://github.com/diego-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> this should also solve the issue described here   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> https://community.powerbi.com/t5/Developer/Adding-threejs-to-a-custom-visual/m-p/2181493/highlight/true#M32829  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updated 2023-05-11  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> found a way to make it work the right way. just have to access web-ifc-api from ifc loader.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> found a way to make it work the right way. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> just have to access web-ifc-api from ifc loader.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> ifcLoader.ifcManager.state.api['isWasmPathAbsolute'] = true;  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> ifcLoader.ifcManager.state.api['wasmPath'] = "https://unpkg.com/web-ifc@0.0.36/";  

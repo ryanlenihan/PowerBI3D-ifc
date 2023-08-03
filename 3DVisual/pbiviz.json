@@ -1,21 +1,21 @@
 {
     "visual": {
-        "name": "powerBI3D",
-        "displayName": "3D Visor - IFC",
-        "guid": "powerBI3DFA89B72B311B4BF98DEF682EC81CCDFA",
-        "visualClassName": "CustomVisual",
-        "version": "1.1.4",
-        "description": "Custom Visual for Power BI to visualize 3D models and connect them to your data. This project is forked from the original PowerBI3D repository to work with IFC",
-        "supportUrl": "https://github.com/slcwang/PowerBI3D-ifc",
-        "gitHubUrl": "https://github.com/slcwang/PowerBI3D-ifc"
+        "name": "powerbiifc",
+        "displayName": "Power BI IFC",
+        "guid": "powerbiifc",
+        "visualClassName": "Visual",
+        "version": "1.0.2",
+        "description": "a",
+        "supportUrl": "github.com",
+        "gitHubUrl": "github.com"
     },
-    "apiVersion": "3.8.0",
+    "apiVersion": "5.1.0",
     "author": {
-        "name": "Steven WANG",
-        "email": "steven.wang@dragageshk.com"
+        "name": "slcw",
+        "email": "wanglicheng@connect.hku.hk"
     },
     "assets": {
-        "icon": "assets/ifc_icon.png"
+        "icon": "assets/icon.png"
     },
     "externalJS": [],
     "style": "style/visual.less",

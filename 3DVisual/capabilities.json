@@ -1,137 +1,102 @@
 {
-    "dataRoles": [{
-            "displayName": "IFC expressID (mandatory)",
-            "name": "id",
-            "kind": "Grouping",
-            "requiredTypes": [{
-                "numeric": true
-            }]
-        },
+    "dataRoles": [
         {
-            "displayName": "Do not use - link",
-            "name": "link",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Do not use - color",
-            "name": "data",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Do not use - category",
+            "displayName": "IFC Express ID",
             "name": "category",
             "kind": "Grouping"
+        },
+        {
+            "displayName": "Tooltip Data",
+            "name": "measure",
+            "kind": "Measure"
         }
-
     ],
     "objects": {
-        "model": {
-            "displayName": "Models",
+        "dataPoint": {
             "properties": {
-                "url": {
-                    "displayName": "URL",
-                    "description": "URL of the IFC model.",
-                    "type": {
-                        "text": true
+                "defaultColor": {  "type": {"fill": { "solid": { "color": true } } } },
+                "fill":         {  "type": {"fill": { "solid": { "color": true } } } },
+                "maxColor":     {  "type": {"fill": { "solid": { "color": true } } } },
+                "midColor":     {  "type": {"fill": { "solid": { "color": true } } } },
+                "minColor":     {  "type": {"fill": { "solid": { "color": true } } } },
+                
+                "conditionalColor":     {  "type": {"fill": { "solid": { "color": true } } } }
+                
+            }
+        },
+        "ifcFileDetails": {
+            "properties": {
+                "showUploadIcon": {  "type": {"bool": true } },
+                "fileName":       {  "type": {"text": true } },
+                "blob":           {  "type": {"text": true } },
+                "jsonUpload":     {  "type": {"text": true } }
+            }
+        },
+        "cameraSettings": {
+            "properties": {
+                "camera_save": {  "type": {"bool": true } },
+                "camera_load": {  "type": {"bool": true } }
+            }
+        },
+        "internalState": {
+            "displayName": "Internal State",
+            "properties": {
+                "geojsonMap":      {  "type": {"text": true } },
+                "ifc_file_base64": {  "type": {"text": true } }
+
+            }
+        },
+        "cameraSettingsObject": {
+            "displayName": "Camera object",
+            "properties": {
+                "cameraObjString":     {  "type": {"text": true } },
+                "controlTargetString": {  "type": {"text": true } }
+                
+            }
+        }
+     
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
                     }
                 },
-                "bgColor": {
-                    "displayName": "Background color",
-                    "displayNameKey": "Visual_BackgroundColor",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure"
                             }
                         }
-                    }
-                },
-                "hoverColor": {
-                    "displayName": "Hover color",
-                    "displayNameKey": "Visual_HoverColor",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "selectColor": {
-                    "displayName": "Select color",
-                    "displayNameKey": "Visual_SelectColor",
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
+                    ]
                 }
             }
         }
-    },
-
+    ],
     "tooltips": {
         "supportedTypes": {
             "default": true,
             "canvas": true
         },
         "roles": [
-            "Tooltips"
+            "tooltips"
         ]
     },
-
-
-    "dataViewMappings": [{
-        "conditions": [{
-            "category": {
-                "max": 1
-            },
-            "id": {
-                "max": 1
-            },
-            "data": {
-                "max": 1
-            },
-
-            "link": {
-                "max": 1
-            }
-        }],
-        "categorical": {
-            "categories": {
-                "select": [{
-                        "for": {
-                            "in": "id"
-                        }
-                    },
-                    {
-                        "bind": {
-                            "to": "category"
-                        }
-                    }
-                ],
-                "dataReductionAlgorithm": {
-                    "top": {
-                        "count": 50000
-                    }
-                }
-            },
-            "values": {
-                "select": [{
-                        "bind": {
-                            "to": "data"
-                        }
-                    },
-                    {
-                        "bind": {
-                            "to": "link"
-                        }
-                    }
-                ]
-            }
-
-        }
-    }]
+    "privileges": [{
+        "name": "WebAccess",
+        "essential": true,
+        "parameters": ["https://unpkg.com"]
+    }],
+    "advancedEditModeSupport": 0,
+    "supportsLandingPage": true,
+    "supportsEmptyDataView": true,
+    "sorting": {
+        "default": {   }
+    }
 }

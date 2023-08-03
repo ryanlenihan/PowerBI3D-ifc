@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
-        
-        "allowJs": true,
+        "allowJs": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "es6",
@@ -12,13 +11,9 @@
         "lib": [
             "es2015",
             "dom"
-        ],
-        "jsx": "react",
-        "types": [
-            "node","react", "react-dom"
-          ]
+        ]
     },
     "files": [
-        "src/CustomVisual.ts"
+        "./src/visual.ts"
     ]
 }

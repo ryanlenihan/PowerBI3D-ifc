@@ -15,6 +15,12 @@ This custom visual was initially developed for 3DM by [Diego Apellániz](https:/
 ✅ Conditional coloring based on db values  
 ✅ Allowing user to upload files in the format tab to avoid issues with COR  
 ✅ there seems to be an issue with fetching web-ifc.wasm  
+🟦 to migrate from web-ifc-three to web-ifc-viewer to gain more prebuilt functions  
+🟦 add another layer on top of base ifc to render simple geometries. 
+    to indicate locations of defects on top of the ifc model   
+    the geometries should be defined in power query, then rendered directly in three.js
+  
+  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updated 2023-05-10  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> turned out to be an issue with IFCLoader.js  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> i botched by changing line 3345 in web-ifc-three@0.0.122/IFCLoader.js  

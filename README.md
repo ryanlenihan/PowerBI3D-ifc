@@ -16,7 +16,7 @@ This custom visual was initially developed for 3DM by [Diego Apellániz](https:/
 ✅ Allowing user to upload files in the format tab to avoid issues with COR  
 ✅ there seems to be an issue with fetching web-ifc.wasm  
 🟦 to migrate from web-ifc-three to web-ifc-viewer to gain more prebuilt functions  
-🟦 add another layer on top of base ifc to render simple geometries. 
+🟦 add another layer on top of base ifc to render simple geometries.  
     to indicate locations of defects on top of the ifc model   
     the geometries should be defined in power query, then rendered directly in three.js
   
